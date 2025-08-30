@@ -20,9 +20,5 @@ public class Main {
         mentoria.setDescricao("Mentoria de Java para melhor desenvolvimento de códigos");
         mentoria.setData(LocalDate.now());
 
-        System.out.println(curso1);
-        System.out.println(curso2);
-        System.out.println(mentoria);
-
     }
 }
