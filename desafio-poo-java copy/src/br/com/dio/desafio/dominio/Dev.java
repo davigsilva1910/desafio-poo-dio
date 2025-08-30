@@ -19,14 +19,15 @@ public class Dev {
     }
 
     public void progredir() {
-        Optional<Conteudo> conteudo = this.conteudosConcluidos.stream().findFirst();
-        if(conteudo.isPresent()) {
+        Optional<Conteudo> conteudo = this.conteudosInscritos.stream().findFirst();
+        if (conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
         } else {
-            System.err.println("Você ainda não tem cursos matriculados");
+            System.err.println("Você não está matriculado em nenhum conteúdo!");
         }
     }
+
 
     public double calcularTotalXp() {
         return this.conteudosConcluidos.stream().mapToDouble(conteudo -> conteudo.calcularXp()).sum();
